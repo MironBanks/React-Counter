@@ -7,10 +7,9 @@
 ## Project Specifications
 
 - components
+- class component
 - props
 - hooks
-- state handling
-- callback hooks
 
 ## TODO LIST
 ### sleep - eat - code -repeat

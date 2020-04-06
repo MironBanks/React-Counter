@@ -1,12 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import './CounterApp.css'
+import CounterView from './CounterView'
 
 
 const CounterApp = (props) => {
 
     const [count, setCount] = useState(0)
     const { title } = props
+
+    useEffect(() => {
+        console.log('useEffect from CounterApp')
+    }, [])
 
     const increment = (step) => () => setCount(count + step)
 
@@ -15,9 +20,10 @@ const CounterApp = (props) => {
         <div>
             <div className='counter-app'>
                 <h1>{title}</h1>
-                <h2 className='value'>{count}</h2>
-                <button onClick={increment(1)}>Increment</button>
-                <button onClick={increment(-1)}>Decrement</button>
+                <CounterView
+                    countValue={count}
+                    handleIncrement={increment}
+                />
             </div>
         </div>
     )

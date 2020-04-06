@@ -12,5 +12,9 @@
 
 ## TODO LIST
 ### sleep - eat - code -repeat
- - [] create counter skeleton
+ - [X] create counter skeleton
 
+### concept of state in a functional component
+<h2 align="center">
+  <img src="./src/assets/code.png" alt="code" width="100%">
+</h2>

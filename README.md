@@ -16,5 +16,5 @@
 
 ### concept of state in a functional component
 <h2 align="center">
-  <img src="./src/assets/code.png" alt="code" width="100%">
+  <img src="./src/assets/code.png" alt="code" width="50%">
 </h2>

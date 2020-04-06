@@ -4,21 +4,36 @@ import './CounterApp.css'
 
 
 
+class CounterApp extends React.Component {
 
-const CounterApp = () => {
-    const [count, setCount] = useState(0)
+    // eslint-disable-next-line no-useless-constructor
+    constructor() {
+        super();
+    }
 
-    const increment = (step) => () => setCount(count + step)
+    state = {
+        count: 0
+    }
 
-    return (
-        <div className='counter-app'>
-            <h1 className='value'>{count}</h1>
-            <button onClick={increment(1)} >Increment</button>
-            <button onClick={increment(-1)} >Decrement</button>
-        </div>
-    )
+    increment = (step) => {
+        this.setState({
+            count: this.state.count + step
+        })
+    }
+
+    render() {
+        const { count } = this.state
+        return (
+            <div>
+                <div className='counter-app'>
+                    <h1 className='value'>{count}</h1>
+                    <button onClick={() => this.increment(1)} >Increment</button>
+                    <button onClick={() => this.increment(-1)} >Decrement</button>
+                </div>
+            </div>
+        )
+    }
 }
-
 
 
 
